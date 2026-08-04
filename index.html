@@ -56,4 +56,268 @@
   /* HERO */
   .hero{
     background:var(--black); color:var(--white);
-    padding:90px
+    padding:90px 24px 70px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(115deg, rgba(255,77,28,0.06) 0px, rgba(255,77,28,0.06) 2px, transparent 2px, transparent 40px);
+    pointer-events:none;
+  }
+  .eyebrow{
+    display:inline-block; font-size:11px; font-weight:700; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--accent); border:1px solid var(--accent);
+    padding:6px 14px; border-radius:20px; margin-bottom:26px;
+  }
+  .hero h1{
+    font-size:clamp(42px, 9vw, 96px); line-height:.95; color:var(--white);
+  }
+  .hero h1 em{font-style:italic; color:var(--accent);}
+  .hero p.sub{
+    max-width:560px; margin:26px auto 0; font-size:16px; color:#cfcfcc; font-style:italic;
+  }
+  .hero .ctas{margin-top:38px; display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:15px 30px; font-weight:700; font-size:13px;
+    text-transform:uppercase; letter-spacing:.06em; border-radius:2px; border:2px solid var(--white);
+  }
+  .btn-primary{background:var(--accent); border-color:var(--accent); color:var(--white);}
+  .btn-ghost{background:transparent; color:var(--white);}
+  .btn-primary:hover{background:#e64311;}
+  .btn-ghost:hover{background:var(--white); color:var(--black);}
+
+  .aviso{
+    background:var(--accent); color:var(--white); text-align:center;
+    font-size:12px; font-weight:700; letter-spacing:.04em; padding:9px 12px;
+    text-transform:uppercase;
+  }
+
+  section{padding:80px 0;}
+  .kicker{
+    font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); margin-bottom:10px;
+  }
+  h2.title{font-size:clamp(28px,5vw,44px); margin-bottom:26px;}
+
+  /* SOBRE NOSOTROS */
+  .about p{max-width:720px; font-size:17px; margin-bottom:16px; color:#2b2b2b;}
+  .about strong{font-style:italic;}
+
+  /* PARA QUIEN ES */
+  .para-quien{background:var(--black); color:var(--white);}
+  .para-quien .kicker{color:var(--accent);}
+  .grid4{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:#2a2a2a; margin-top:20px;
+    border:1px solid #2a2a2a;
+  }
+  .card{background:var(--black); padding:34px 30px;}
+  .card h3{font-size:17px; margin-bottom:12px; color:var(--white); font-style:italic; text-transform:none; letter-spacing:0;}
+  .card p{font-size:14.5px; color:#bdbdbb;}
+
+  /* HORARIO */
+  .horario{background:var(--off);}
+  .schedule{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px;
+  }
+  .slot{
+    background:var(--white); border:1px solid #ddd8d0; padding:30px 26px; border-radius:2px;
+  }
+  .slot .day{font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:8px;}
+  .slot h3{font-size:20px; text-transform:none; font-style:italic; margin-bottom:10px;}
+  .slot p{font-size:14px; color:#555;}
+
+  /* INAUGURACION - banner */
+  .banner{
+    background:var(--black); color:var(--white);
+    padding:70px 24px; text-align:center;
+  }
+  .banner .kicker{color:var(--accent);}
+  .banner h2{font-size:clamp(30px,6vw,54px); margin-bottom:14px;}
+  .banner p{max-width:600px; margin:0 auto 10px; color:#d6d6d3; font-size:16px;}
+  .banner .place{font-style:italic; color:var(--accent); font-size:18px; margin:18px 0;}
+  .sponsor-note{
+    margin-top:34px; padding-top:30px; border-top:1px solid #2a2a2a;
+    font-size:13px; color:#9c9c98; max-width:560px; margin-left:auto; margin-right:auto;
+  }
+
+  /* JOIN / NEWSLETTER */
+  .join{text-align:center;}
+  .join h2{margin-bottom:10px;}
+  .join p{max-width:520px; margin:0 auto 30px; color:#444;}
+  .join-form{display:flex; gap:10px; justify-content:center; max-width:460px; margin:0 auto; flex-wrap:wrap;}
+  .join-form input{
+    flex:1; min-width:200px; padding:15px 16px; border:2px solid var(--black); font-size:14px; border-radius:2px;
+  }
+  .join-form button{
+    background:var(--black); color:var(--white); border:2px solid var(--black); padding:15px 24px;
+    font-weight:700; text-transform:uppercase; font-size:13px; letter-spacing:.06em; border-radius:2px; cursor:pointer;
+  }
+  .join-form button:hover{background:var(--accent); border-color:var(--accent);}
+  .social-row{display:flex; gap:16px; justify-content:center; margin-top:26px;}
+  .social-row a{
+    border:1px solid var(--black); padding:10px 18px; font-size:12px; font-weight:700;
+    text-transform:uppercase; letter-spacing:.06em; border-radius:2px;
+  }
+  .social-row a:hover{background:var(--black); color:var(--white);}
+
+  footer{background:var(--black); color:#8f8f8b; padding:46px 24px 30px;}
+  .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; padding-bottom:26px; border-bottom:1px solid #222;}
+  .footer-grid .logo{font-size:18px;}
+  .footer-links{display:flex; gap:22px; flex-wrap:wrap; font-size:13px;}
+  .footer-links a:hover{color:var(--white);}
+  .footer-bottom{padding-top:20px; font-size:12px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+
+  @media (max-width:760px){
+    nav ul{position:fixed; top:64px; left:0; right:0; background:var(--black); flex-direction:column; padding:20px 24px; gap:18px; display:none; border-bottom:1px solid #222;}
+    nav ul.open{display:flex;}
+    .menu-btn{display:block;}
+    .nav-cta{display:none;}
+    .grid4{grid-template-columns:1fr;}
+    .schedule{grid-template-columns:1fr;}
+    .footer-bottom{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<div class="aviso">Aviso legal: esto es un club serio (excepto cuando no lo es, que es la mayoría de las veces)</div>
+
+<header>
+  <nav>
+    <a href="#top" class="logo">sometimes <span>we</span> run</a>
+    <ul id="navList">
+      <li><a href="#sobre">Sobre nosotros</a></li>
+      <li><a href="#para-quien">Para quién es</a></li>
+      <li><a href="#horario">Horario</a></li>
+      <li><a href="#inauguracion">Inauguración</a></li>
+      <li><a href="#unete" class="nav-cta">Únete</a></li>
+    </ul>
+    <button class="menu-btn" onclick="document.getElementById('navList').classList.toggle('open')">&#9776;</button>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Valencia · Since 2026</span>
+    <h1>Sometimes <em>we</em> run</h1>
+    <p class="sub">El club de running para gente que no es lo bastante mayor para la crisis del running, ni lo bastante joven para no odiar hacer deporte.</p>
+    <div class="ctas">
+      <a href="#unete" class="btn btn-primary">Únete al grupo</a>
+      <a href="#inauguracion" class="btn btn-ghost">Ver la inauguración</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <div class="wrap">
+    <div class="kicker">Sobre nosotros</div>
+    <h2 class="title">No somos un club de running.<br>Bueno, sí, pero no en serio.</h2>
+    <p>Sometimes We Run nace en Valencia en 2026 porque sus fundadores querían <strong>sometimes</strong> correr, pero ninguno tenía ganas suficientes para ir solo, y juntos tenían ritmos diferentes (ritmos corriendo, no los circadianos de Marcos Llorente).</p>
+    <p>Aparece porque cuando buscas club de running en Valencia solo hay clubs de runners profesionales (no como este) o clubs de guiris - <em>we are also guiri friendly*</em>.</p>
+    <p>Se creó para pasarlo bien, para ir a planes cool, para hacer algo entre semana que no sea trabajar o ver Netflix. Probablemente no te haga ganar una maratón. Pero sí puede que seas un poco más feliz.</p>
+  </div>
+</section>
+
+<section class="para-quien" id="para-quien">
+  <div class="wrap">
+    <div class="kicker">¿Encajas aquí?</div>
+    <h2 class="title" style="color:#fff;">Para quién es Sometimes We Run</h2>
+    <div class="grid4">
+      <div class="card">
+        <h3>"No he corrido en mi vida"</h3>
+        <p>Tus amigos son muy pro o no han hecho deporte nunca. Da igual cuál seas de los tres grupos: aquí aceptamos a todos, menos a los que dicen que les gusta madrugar para correr. Esa gente no es de fiar.</p>
+      </div>
+      <div class="card">
+        <h3>"Mi pareja va muy rápido"</h3>
+        <p>Si te agobia que tu pareja vaya muy rápido — ya sea en la relación o corriendo — en Sometimes We Run hay gente a ritmos distintos. Aquí nadie te deja atrás (bueno, un poco sí).</p>
+      </div>
+      <div class="card">
+        <h3>"Mi pareja va muy despacio"</h3>
+        <p>Hay estudios (que no vamos a citar) que dicen que ir más despacio hace que la relación dure más. En el running pasa lo mismo: cuanto más despacio vayas, más te dura la carrera.</p>
+      </div>
+      <div class="card">
+        <h3>"Quiero estar más sano"</h3>
+        <p>No nos hacemos responsables de la salud de los miembros del grupo. Pero, ¿qué puede ser peor que sometimes correr? No correr sometimes. Así que esto también es para ti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="horario" id="horario">
+  <div class="wrap">
+    <div class="kicker">La rutina</div>
+    <h2 class="title">Cuándo corremos (sometimes)</h2>
+    <div class="schedule">
+      <div class="slot">
+        <div class="day">Miércoles</div>
+        <h3>Running de tarde</h3>
+        <p>Salida corta entre semana para sacudirse la oficina de encima.</p>
+      </div>
+      <div class="slot">
+        <div class="day">Jueves</div>
+        <h3>Running + cervecita</h3>
+        <p>Running de tarde y, algunos jueves, cervecita después. Sin prisa, sin dorsal.</p>
+      </div>
+      <div class="slot">
+        <div class="day">Sábado</div>
+        <h3>Running + afterrunning</h3>
+        <p>Salida de mañana y after en cafetería o bar. La parte más importante del sábado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="banner" id="inauguracion">
+  <div class="wrap">
+    <div class="kicker">Inauguración</div>
+    <h2>Nos vemos el sábado 26 de septiembre</h2>
+    <p>Arrancamos el sábado 26 de septiembre a las 10.00 la primera salida oficial del club.</p>
+    <div class="place">📍 Mascarpone — tienda de tiramisú y café de especialidad, Valencia</div>
+    <p>After-running con tiramisú y café de especialidad. <a href="https://www.instagram.com/mascarpone.co/?hl=es" style="text-decoration:underline; color:#fff;">@mascarpone.co</a></p>
+    <div class="sponsor-note">
+      Camisetas de la inauguración con la colaboración de <strong style="color:#fff;">Barmmy</strong>, y descuento para el club en sus gafas de sol para correr. <a href="https://www.barmmy.com" style="text-decoration:underline; color:var(--accent);">barmmy.com</a>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="unete">
+  <div class="wrap">
+    <div class="kicker">Únete</div>
+    <h2 class="title">Unirse, al contrario que correr, no cuesta nada</h2>
+    <p>Déjanos tu email para avisarte de los próximos eventos, salidas y colaboraciones.</p>
+    <form class="join-form" action="https://formspree.io/f/mnpaajag" method="POST">
+      <input type="email" name="email" placeholder="tu@email.com" required>
+      <button type="submit">Avísame</button>
+    </form>
+    <div class="social-row">
+      <a href="#">Instagram</a>
+      <a href="#">Grupo de WhatsApp</a>
+      <a href="#">Strava Club</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <a href="#top" class="logo">sometimes <span style="color:var(--accent);">we</span> run</a>
+      <div class="footer-links">
+        <a href="#sobre">Sobre nosotros</a>
+        <a href="#para-quien">Para quién es</a>
+        <a href="#horario">Horario</a>
+        <a href="#unete">Únete</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sometimes We Run, Valencia.</span>
+      <span>Corres bajo tu propia responsabilidad. Los pies son tuyos.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
